@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #00e87a;
+  --bg: #080c18;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080c18;
+  color: #f0f4ff;
+  font-family: "Space Mono", monospace;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080c18; }
+::-webkit-scrollbar-thumb { background: rgba(0,232,122,0.4); border-radius: 4px; }
+
+/* Selection */
+::selection { background: rgba(0,232,122,0.2); color: #00e87a; }
+
+@layer utilities {
+  .text-green { color: #00e87a; }
+  .border-green { border-color: #00e87a; }
+  .bg-green { background-color: #00e87a; }
+
+  .grid-bg {
+    background-image: linear-gradient(rgba(0,232,122,0.035) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0,232,122,0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .glow-green {
+    text-shadow: 0 0 40px rgba(0,232,122,0.35);
+  }
+
+  .glow-box {
+    box-shadow: 0 0 30px rgba(0,232,122,0.35);
+  }
+
+  .photo-glow {
+    background: radial-gradient(circle, rgba(0,232,122,0.12) 0%, transparent 70%);
+  }
+
+  .animate-delay-100 { animation-delay: 0.1s; }
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-300 { animation-delay: 0.3s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+  .animate-delay-500 { animation-delay: 0.5s; }
+}
