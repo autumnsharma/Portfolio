@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import CountUp from "./ui/CountUp";
 
 const STATS = [
   { value: 22,  key: "stats.age" },
@@ -10,24 +11,6 @@ const STATS = [
   { value: 20,  key: "stats.projects" },
   { value: 10,  key: "stats.deployed" },
 ];
-
-function CountUp({ target, start }: { target: number; start: boolean }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!start) return;
-    let current = 0;
-    const step = Math.ceil(target / 40);
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      setCount(current);
-      if (current >= target) clearInterval(timer);
-    }, 35);
-    return () => clearInterval(timer);
-  }, [start, target]);
-
-  return <>{count}</>;
-}
 
 export default function Stats() {
   const { t } = useLanguage();
@@ -60,7 +43,7 @@ export default function Stats() {
               letterSpacing: "-0.03em",
             }}
           >
-            <CountUp target={stat.value} start={inView} />
+            <CountUp to={stat.value} from={0} duration={2} delay={0.2} />
           </span>
           <span
             className="font-mono text-[0.75rem] leading-snug tracking-wide"
