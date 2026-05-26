@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Radnaabazar Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#0f1016',
+              green: '#00ff9c',
+              light: '#f8f8f8',
+              gray: '#a1a1aa'
+            }
+          },
+          backgroundImage: {
+            'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+            'gradient-pill': 'linear-gradient(90deg, #a855f7 0%, #00ff9c 100%)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    body {
+      background-color: #0f1016;
+      color: #f8f8f8;
+      font-family: 'JetBrains Mono', monospace;
+      overflow-x: hidden;
+    }
+
+    .neon-border {
+      border: 2px dashed #00ff9c;
+      box-shadow: 0 0 15px rgba(0, 255, 156, 0.3), inset 0 0 15px rgba(0, 255, 156, 0.3);
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .nav-link.active {
+      color: #00ff9c;
+      border-bottom: 2px solid #00ff9c;
+    }
+
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      background-color: #00ff9c;
+      color: #0f1016;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative flex flex-col">
+<!-- Background Grid -->
+<div class="absolute inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+<!-- BEGIN: MainHeader -->
+<header class="relative z-10 py-6 px-8 md:px-16 flex justify-between items-center w-full max-w-7xl mx-auto">
+<!-- Logo -->
+<div class="flex items-baseline space-x-1">
+<h1 class="text-3xl font-bold tracking-tight">SharadSharma</h1>
+<span class="text-brand-green text-3xl leading-none">.</span>
+</div>
+<!-- Navigation -->
+<nav class="hidden md:flex space-x-8 text-sm font-medium">
+<a class="nav-link active pb-1" href="#">Professional</a>
+<a class="hover:text-brand-green transition-colors pb-1 border-b-2 border-transparent" href="#">Personal</a>
+<a class="hover:text-brand-green transition-colors pb-1 border-b-2 border-transparent" href="#">Contact</a>
+</nav>
+<!-- Language Selector -->
+<button class="flex items-center space-x-2 bg-brand-green text-brand-dark px-4 py-2 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all shadow-[0_0_15px_rgba(0,255,156,0.4)]">
+<i class="fa-solid fa-globe"></i>
+<span class="">English</span>
+<i class="fa-solid fa-caret-down text-xs ml-1"></i>
+</button>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<main class="relative z-10 flex-grow flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto px-8 md:px-16 py-12 gap-12">
+<!-- Left Content -->
+<div class="flex-1 flex flex-col space-y-6 max-w-2xl">
+<!-- Titles -->
+<div class="space-y-4">
+<p class="text-lg md:text-xl text-gray-300">Fullstack Developer</p>
+<h2 class="text-5xl md:text-7xl font-bold leading-tight">
+          Hello I'm<br><font color="#00ff9c"><span style="caret-color: rgb(0, 255, 156);" class="">Sharad Sharma</span></font></h2>
+</div>
+<!-- Taglines & Info -->
+<div class="space-y-3 text-sm md:text-base text-gray-300">
+<p class="">Pragmatic, delivery-oriented SWE | Fintech &amp; Cloud |</p>
+<p class="">
+          AI Engineering | 
+          <span class="inline-flex items-center mx-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i>Pune,India</span></p>
+<!-- Gradient Pill -->
+<div class="inline-block mt-2">
+<span class="bg-gradient-pill text-brand-dark font-bold px-3 py-1 rounded-md text-xs md:text-sm">Pre-final Year Student At AIT Pune<br></span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-6 pt-4">
+<!-- View CV Button -->
+<button class="flex items-center space-x-2 border-2 border-brand-green text-brand-green px-6 py-3 rounded-full font-bold hover:bg-brand-green hover:text-brand-dark transition-all">
+<span class="">VIEW CV</span>
+<i class="fa-solid fa-chevron-right text-xs"></i>
+</button>
+<!-- Social Links -->
+<div class="flex space-x-4">
+<a class="social-icon w-10 h-10 rounded-full border border-brand-green flex items-center justify-center text-brand-green" href="#">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+<a class="social-icon w-10 h-10 rounded-full border border-brand-green flex items-center justify-center text-brand-green" href="#">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a class="social-icon w-10 h-10 rounded-full border border-brand-green flex items-center justify-center text-brand-green" href="#">
+<i class="fa-brands fa-youtube"></i>
+</a>
+<a class="social-icon w-10 h-10 rounded-full border border-brand-green flex items-center justify-center text-brand-green" href="#">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+<a class="social-icon w-10 h-10 rounded-full border border-brand-green flex items-center justify-center text-brand-green" href="#">
+<i class="fa-brands fa-github"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Image -->
+<div class="flex-1 flex justify-center md:justify-end">
+<div class="relative w-72 h-72 md:w-96 md:h-96">
+<!-- Neon Border Container -->
+<div class="absolute inset-0 neon-border rounded-full flex items-center justify-center">
+<!-- Profile Image -->
+<img alt="Profile Character" class="w-[95%] h-[95%] object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPGfs9CYLl-dmtOxHKOJ86oIPH8j9Ei6AuakYgO8ClPkhYheW-ALv3bvRpdeKHNhIuLTupXxz3byGrLFt2YnjfQe4Q1R7mfG7HfO3hvyBEBcbRl3NKqS9n5oFz7AQsPm3YpXOEqNtZUsEMWq80EbtLeTdIJYr9maF1tcg0ixsW-aFDFrvfZsQqb6ryPb07NeN269I_FfXYwTwd4KQkmYr17pBmQqt4OUmhclOzo7pmQCzJrAjXykMMIps0MFLHaJ-QpBcbEt9o70Ld5w" style="clip-path: circle(50% at 50% 50%); object-position: 70% 30%;">
+</div>
+</div>
+</div>
+</main>
+<!-- END: HeroSection -->
+<!-- BEGIN: StatsFooter -->
+<footer class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 pb-12 pt-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+<!-- Stat 1 -->
+<div class="flex items-center space-x-4">
+<span class="text-5xl md:text-6xl font-bold">20</span>
+<span class="text-sm text-gray-400">Age</span>
+</div>
+<!-- Stat 2 -->
+<div class="flex items-center space-x-4">
+<span class="text-5xl md:text-6xl font-bold">2</span>
+<span class="text-sm text-gray-400 leading-tight">Years of<br>experience</span>
+</div>
+<!-- Stat 3 -->
+<div class="flex items-center space-x-4">
+<span class="text-5xl md:text-6xl font-bold">35</span>
+<span class="text-sm text-gray-400 leading-tight">Projects worked<br>on</span>
+</div>
+<!-- Stat 4 -->
+<div class="flex items-center space-x-4">
+<span class="text-5xl md:text-6xl font-bold">20</span>
+<span class="text-sm text-gray-400 leading-tight">Projects<br>Deployed</span>
+</div>
+</div>
+</footer>
+<!-- END: StatsFooter -->
+
+
+
+
+</body></html>
